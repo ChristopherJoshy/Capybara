@@ -11,7 +11,7 @@
 Detect meaningful changes in sealed packages using **sound, vibration, on-device signal processing, and adaptive AI** â€” without opening the box.
 
 <p>
-  <a href="https://github.com/ChristopherJoshy/capybara"><img alt="Repository" src="https://img.shields.io/badge/GitHub-CapyBara-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+    <a href="https://github.com/ChristopherJoshy/Capybara"><img alt="Repository" src="https://img.shields.io/badge/GitHub-Capybara-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-FFB86C?style=for-the-badge&logo=apache&logoColor=111827" /></a>
   <img alt="Platform" src="https://img.shields.io/badge/Android-10%2B-3DDC84?style=for-the-badge&logo=android&logoColor=111827" />
   <img alt="Runtime" src="https://img.shields.io/badge/Inference-ON--DEVICE-57E6D0?style=for-the-badge" />
@@ -369,7 +369,7 @@ Compare a spare-parts or technician case before dispatch and after a field visit
 ### 1. Clone and build
 
 ```bash
-git clone https://github.com/ChristopherJoshy/capybara.git
+git clone https://github.com/ChristopherJoshy/Capybara.git
 cd CapyBara
 
 # Linux / macOS
