@@ -2,16 +2,16 @@
 
 <img src=".github/assets/capybara-hero.gif" width="100%" alt="Animated Capybara SDK hero with a capybara mascot and active sensing rings" />
 
-# ðŸ¦« CAPYBARA
+# 🦫 CAPYBARA
 
 ### Give the physical world a memory.
 
 **A camera-free, fully offline Android SDK for non-invasive physical integrity checks.**
 
-Detect meaningful changes in sealed packages using **sound, vibration, on-device signal processing, and adaptive AI** â€” without opening the box.
+Detect meaningful changes in sealed packages using **sound, vibration, on-device signal processing, and adaptive AI** — without opening the box.
 
 <p>
-    <a href="https://github.com/ChristopherJoshy/Capybara"><img alt="Repository" src="https://img.shields.io/badge/GitHub-Capybara-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/ChristopherJoshy/Capybara"><img alt="Repository" src="https://img.shields.io/badge/GitHub-Capybara-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-FFB86C?style=for-the-badge&logo=apache&logoColor=111827" /></a>
   <img alt="Platform" src="https://img.shields.io/badge/Android-10%2B-3DDC84?style=for-the-badge&logo=android&logoColor=111827" />
   <img alt="Runtime" src="https://img.shields.io/badge/Inference-ON--DEVICE-57E6D0?style=for-the-badge" />
@@ -25,27 +25,27 @@ Detect meaningful changes in sealed packages using **sound, vibration, on-device
   <img alt="Hackathon" src="https://img.shields.io/badge/iQOO%20Hackathon-Team%20Nexus-FBBF24?style=flat-square" />
 </p>
 
-**[Explore the idea](#-the-problem)** Â· **[See how it works](#-how-capybara-works)** Â· **[Architecture](#-under-the-hood)** Â· **[Benchmarks](#-results--testing)** Â· **[Get started](#-quick-start)** Â· **[Research](#-research-that-inspired-capybara)**
+**[Explore the idea](#-the-problem)** · **[See how it works](#-how-capybara-works)** · **[Architecture](#-under-the-hood)** · **[Benchmarks](#-results--testing)** · **[Get started](#-quick-start)** · **[Research](#-research-that-inspired-capybara)**
 
 </div>
 
 ---
 
-## ðŸ“¦ The problem
+## 📦 The problem
 
 ### The package looks right. What about what's inside?
 
-A parcel can arrive with an intact seal and still contain the wrong product, missing accessories, substituted goods, or a changed internal arrangement. At each handover â€” seller to courier, courier to customer, customer to return center â€” somebody has to decide whether the contents are still consistent with the original package.
+A parcel can arrive with an intact seal and still contain the wrong product, missing accessories, substituted goods, or a changed internal arrangement. At each handover — seller to courier, courier to customer, customer to return center — somebody has to decide whether the contents are still consistent with the original package.
 
 The usual methods have blind spots:
 
 | Existing approach | What it tells you | What it cannot reliably tell you |
 |:--|:--|:--|
-| ðŸ“¦ Open the package | Visible contents and visible damage | Breaks the closed-package workflow; adds handling, time, and risk of accidental damage |
-| âš–ï¸ Weigh it | Total mass | Same-mass substitutions or meaningful changes without a large weight difference |
-| ðŸ·ï¸ Check the seal | Whether a particular seal shows interference | Whether the internal contents still match a trusted reference |
-| ðŸ“· Photograph the outside | External appearance | What changed inside opaque packaging |
-| ðŸ­ Specialized inspection equipment | More detailed information for supported applications | Requires additional hardware, cost, training, or operating constraints |
+| 📦 Open the package | Visible contents and visible damage | Breaks the closed-package workflow; adds handling, time, and risk of accidental damage |
+| ⚖️ Weigh it | Total mass | Same-mass substitutions or meaningful changes without a large weight difference |
+| 🏷️ Check the seal | Whether a particular seal shows interference | Whether the internal contents still match a trusted reference |
+| 📷 Photograph the outside | External appearance | What changed inside opaque packaging |
+| 🏭 Specialized inspection equipment | More detailed information for supported applications | Requires additional hardware, cost, training, or operating constraints |
 
 **Capybara adds a different kind of evidence:** a repeatable **physical-response comparison** while the package remains closed.
 
@@ -53,7 +53,7 @@ The usual methods have blind spots:
 
 ---
 
-## âœ¨ Meet Capybara
+## ✨ Meet Capybara
 
 Capybara is an **open-source Android SDK** that lets developers build physical integrity checks directly into their own apps. It uses a phone's available speaker, vibration actuator, microphone, accelerometer, and gyroscope to excite and observe a contacted package or object.
 
@@ -63,7 +63,7 @@ A trusted baseline is recorded first. When the same object is checked again, Cap
 
 <img src=".github/assets/scan-workflow.gif" width="100%" alt="Animated four-stage workflow: enroll, rescan, analyze and decide" />
 
-**`ENROLL` â†’ `RE-SCAN` â†’ `ANALYZE` â†’ `MATCH / CHANGED / INCONCLUSIVE`**
+**`ENROLL` → `RE-SCAN` → `ANALYZE` → `MATCH / CHANGED / INCONCLUSIVE`**
 
 </div>
 
@@ -72,39 +72,39 @@ A trusted baseline is recorded first. When the same object is checked again, Cap
 <table>
 <tr><td width="50%" valign="top">
 
-**ðŸ”’ Private by design**
+**🔒 Private by design**
 
 Audio capture, sensor processing, evidence generation and inference run locally. No remote decision service or account is required to scan.
 
 </td><td width="50%" valign="top">
 
-**ðŸ“µ Camera-free operation**
+**📵 Camera-free operation**
 
 Uses physical responses rather than photos. No camera permissions, image recognition, or line of sight through the package.
 
 </td></tr>
 <tr><td valign="top">
 
-**ðŸ§  Adaptive decision paths**
+**🧠 Adaptive decision paths**
 
 Use Cappy-Laya on devices selected by the configurable resource policy or the lightweight heuristic engine on constrained phones.
 
 </td><td valign="top">
 
-**ðŸ§© SDK, not a locked-down app**
+**🧩 SDK, not a locked-down app**
 
 Build your own interface, container profiles, verification rules, and follow-up actions. Apache-2.0 licensing enables commercial use.
 
 </td></tr>
 <tr><td valign="top">
 
-**ðŸ“³ Multimodal sensing**
+**📳 Multimodal sensing**
 
 Combines acoustic and inertial evidence to analyze how an object responds to controlled excitation.
 
 </td><td valign="top">
 
-**ðŸ›¡ï¸ Evidence-first decisions**
+**🛡️ Evidence-first decisions**
 
 Uses saved baselines, capture provenance, quality checks and an explicit inconclusive outcome when a scan cannot support a reliable conclusion.
 
@@ -113,7 +113,7 @@ Uses saved baselines, capture provenance, quality checks and an explicit inconcl
 
 ---
 
-## ðŸ”¬ How Capybara works
+## 🔬 How Capybara works
 
 ### 1. Create a trusted physical reference
 
@@ -131,21 +131,21 @@ The microphone records sound while available inertial sensors record motion. Tim
 
 On-device DSP analyzes properties such as signal energy, spectral distribution, motion, repeatability, and changes relative to the trusted baseline. Multiple available sensor channels provide complementary measurements.
 
-### 5. Make a decision â€” or abstain
+### 5. Make a decision — or abstain
 
 The appropriate processing path evaluates the collected evidence. The application receives a structured outcome for its workflow:
 
 | Outcome | Interpretation | Recommended application action |
 |:--:|:--|:--|
-| ðŸŸ¢ **MATCH** | The response is sufficiently consistent with the selected reference under the configured decision policy | Continue the normal workflow |
-| ðŸŸ  **CHANGED** | The response indicates a meaningful difference under the configured decision policy | Request inspection, rescan, or review |
-| âšª **INCONCLUSIVE** | Data quality, support conditions, or confidence do not justify a definite decision | Reposition, rescan, or use another inspection method |
+| 🟢 **MATCH** | The response is sufficiently consistent with the selected reference under the configured decision policy | Continue the normal workflow |
+| 🟠 **CHANGED** | The response indicates a meaningful difference under the configured decision policy | Request inspection, rescan, or review |
+| ⚪ **INCONCLUSIVE** | Data quality, support conditions, or confidence do not justify a definite decision | Reposition, rescan, or use another inspection method |
 
 **Capybara detects changes in measured physical response. It is not an X-ray scanner, and a MATCH does not guarantee that an item is authentic, safe, or undamaged.**
 
 ---
 
-## ðŸŒˆ One phone. Multiple sensing modalities.
+## 🌈 One phone. Multiple sensing modalities.
 
 <div align="center">
 
@@ -155,20 +155,20 @@ The appropriate processing path evaluates the collected evidence. The applicatio
 
 | Layer | Inputs | Role |
 |:--|:--|:--|
-| ðŸ”Š **AcousticProbe** | Speaker output + microphone capture | Stimulates and records the object's acoustic response |
-| ðŸ“³ **HapticProbe** | Available vibration motor(s) + IMU | Observes vibration-coupled behavior |
-| ðŸ“ˆ **PhysicsEngine** | Actual PCM and IMU measurements | Computes interpretable signal descriptors and differences |
-| ðŸ§¬ **EchoNet / VibraNet** | Acoustic and motion evidence | Modality-specific learned analysis |
-| ðŸ”€ **PhysFusion** | Multiple model and physical features | Combines complementary evidence |
-| ðŸ§  **StateNet / SpatialNet** | Changes across states and positions | Adds temporal and placement-aware interpretation |
-| âš¡ **Cappy-Laya** | Structured, versioned evidence | Produces the AI-assisted decision output |
-| ðŸ›¡ï¸ **TrustGate** | Evidence, quality, policy, calibration | Controls when a verdict can be returned |
+| 🔊 **AcousticProbe** | Speaker output + microphone capture | Stimulates and records the object's acoustic response |
+| 📳 **HapticProbe** | Available vibration motor(s) + IMU | Observes vibration-coupled behavior |
+| 📈 **PhysicsEngine** | Actual PCM and IMU measurements | Computes interpretable signal descriptors and differences |
+| 🧬 **EchoNet / VibraNet** | Acoustic and motion evidence | Modality-specific learned analysis |
+| 🔀 **PhysFusion** | Multiple model and physical features | Combines complementary evidence |
+| 🧠 **StateNet / SpatialNet** | Changes across states and positions | Adds temporal and placement-aware interpretation |
+| ⚡ **Cappy-Laya** | Structured, versioned evidence | Produces the AI-assisted decision output |
+| 🛡️ **TrustGate** | Evidence, quality, policy, calibration | Controls when a verdict can be returned |
 
 Because the SDK detects available hardware and follows configurable sensing profiles, an application can choose appropriate methods for different Android devices and package types. **Contact, orientation, materials, background noise, and size still affect measurements**, so repeatable placement and quality gates matter.
 
 ---
 
-## ðŸ§  Smart execution: Cappy-Laya + lightweight fallback
+## 🧠 Smart execution: Cappy-Laya + lightweight fallback
 
 <div align="center">
 
@@ -176,23 +176,23 @@ Because the SDK detects available hardware and follows configurable sensing prof
 
 </div>
 
-The same SDK can serve both high-resource phones and devices with limited RAM. **Developers control the decision policy** â€” the following describes the team's reported default configuration.
+The same SDK can serve both high-resource phones and devices with limited RAM. **Developers control the decision policy** — the following describes the team's reported default configuration.
 
 ```text
                          DEVICE CHECK
-                              â”‚
+                              │
                  RAM > 4 GB AND free space > 20 GB?
-                        â”Œâ”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”
-                        â”‚           â”‚
+                        ┌─────┴─────┐
+                        │           │
                        YES          NO
-                        â”‚           â”‚
-                 â”Œâ”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â” â”Œâ”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-                 â”‚ CAPPY-LAYA  â”‚ â”‚ LIGHTWEIGHT ENGINE â”‚
-                 â”‚ AI DECISION â”‚ â”‚ HEURISTIC RULES    â”‚
-                 â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                        â”‚           â”‚
-                        â””â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”˜
-                              â–¼
+                        │           │
+                 ┌──────▼──────┐ ┌──▼─────────────────┐
+                 │ CAPPY-LAYA  │ │ LIGHTWEIGHT ENGINE │
+                 │ AI DECISION │ │ HEURISTIC RULES    │
+                 └─────────────┘ └────────────────────┘
+                        │           │
+                        └─────┬─────┘
+                              ▼
                      INTEGRITY OUTCOME
 ```
 
@@ -212,10 +212,10 @@ The same SDK can serve both high-resource phones and devices with limited RAM. *
 
 ---
 
-## ðŸ—ï¸ Under the hood
+## 🏗️ Under the hood
 
 <details open>
-<summary><b>ðŸ§¬ Expand / collapse the complete processing architecture</b></summary>
+<summary><b>🧬 Expand / collapse the complete processing architecture</b></summary>
 
 ```mermaid
 flowchart TD
@@ -285,7 +285,7 @@ A capture hash establishes the provenance of recorded bytes. **It does not estab
 
 ---
 
-## ðŸ“Š Results & testing
+## 📊 Results & testing
 
 <div align="center">
 
@@ -312,7 +312,7 @@ The team reported an overall result of **approximately 91% across testing involv
 
 ---
 
-## ðŸšš Real-world applications
+## 🚚 Real-world applications
 
 <div align="center">
 
@@ -323,30 +323,30 @@ The team reported an overall result of **approximately 91% across testing involv
 <table>
 <tr><td width="50%" valign="top">
 
-### ðŸ“¦ Parcel delivery
+### 📦 Parcel delivery
 Compare the package's physical response at dispatch and receipt. Give drivers and recipients another signal before opening it.
 
-### ðŸ” E-commerce returns
+### 🔁 E-commerce returns
 Add non-invasive screening at the return counter for changed contents, item substitution, or missing components.
 
-### ðŸ¬ Warehouses
+### 🏬 Warehouses
 Capture reference measurements at checkpoints and compare later scans during inventory movement.
 
-### ðŸ§° Equipment rentals
+### 🧰 Equipment rentals
 Compare the physical response of a closed kit or equipment case at checkout and return.
 
 </td><td width="50%" valign="top">
 
-### ðŸ”§ Repair handovers
+### 🔧 Repair handovers
 Record a reference at service intake and compare the same closed container at collection.
 
-### ðŸ§ª Laboratory loaner kits
+### 🧪 Laboratory loaner kits
 Screen supported equipment cases before and after student or technician loans.
 
-### ðŸŽª Event & production gear
+### 🎪 Event & production gear
 Add checks to handovers of cases containing supported AV accessories and spare parts.
 
-### ðŸš Field-service tools
+### 🚐 Field-service tools
 Compare a spare-parts or technician case before dispatch and after a field visit.
 
 </td></tr>
@@ -356,7 +356,7 @@ Compare a spare-parts or technician case before dispatch and after a field visit
 
 ---
 
-## ðŸš€ Quick start
+## 🚀 Quick start
 
 ### Requirements
 
@@ -483,60 +483,60 @@ To run connected instrumentation tests, use an authorized, connected Android dev
 
 ---
 
-## ðŸ—‚ï¸ Repository layout
+## 🗂️ Repository layout
 
 ```text
 CapyBara/
-â”œâ”€â”€ .github/
-â”‚   â””â”€â”€ assets/                # Animated README visuals (add this package)
-â”‚       â”œâ”€â”€ capybara-hero.gif
-â”‚       â”œâ”€â”€ scan-workflow.gif
-â”‚       â”œâ”€â”€ sensor-fusion.gif
-â”‚       â”œâ”€â”€ adaptive-modes.gif
-â”‚       â””â”€â”€ use-cases.gif
-â”œâ”€â”€ sdk/                       # Android SDK, physical acquisition, DSP,
-â”‚   â”‚                          # model workflows, encrypted references
-â”‚   â”œâ”€â”€ docs/                  # Architecture, scientific notes and experiments
-â”‚   â”œâ”€â”€ src/                   # Kotlin / Android library implementation
-â”‚   â””â”€â”€ training/              # Training, preparation and evaluation tools
-â”œâ”€â”€ apk/                       # Jetpack Compose demonstration application
-â”‚   â”œâ”€â”€ docs/                  # App design and test procedure
-â”‚   â””â”€â”€ src/                   # Android application
-â”œâ”€â”€ research.md                # Research decisions and source audit
-â”œâ”€â”€ mistakes.md                # Technical lessons and regression notes
-â”œâ”€â”€ CODEX_HANDOFF.md           # Engineering continuation and state notes
-â”œâ”€â”€ README.md
-â”œâ”€â”€ LICENSE
-â””â”€â”€ gradlew / gradlew.bat
+├── .github/
+│   └── assets/                # Animated README visuals (add this package)
+│       ├── capybara-hero.gif
+│       ├── scan-workflow.gif
+│       ├── sensor-fusion.gif
+│       ├── adaptive-modes.gif
+│       └── use-cases.gif
+├── sdk/                       # Android SDK, physical acquisition, DSP,
+│   │                          # model workflows, encrypted references
+│   ├── docs/                  # Architecture, scientific notes and experiments
+│   ├── src/                   # Kotlin / Android library implementation
+│   └── training/              # Training, preparation and evaluation tools
+├── apk/                       # Jetpack Compose demonstration application
+│   ├── docs/                  # App design and test procedure
+│   └── src/                   # Android application
+├── research.md                # Research decisions and source audit
+├── mistakes.md                # Technical lessons and regression notes
+├── CODEX_HANDOFF.md           # Engineering continuation and state notes
+├── README.md
+├── LICENSE
+└── gradlew / gradlew.bat
 ```
 
-Useful developer documentation: [`sdk/docs/architecture.md`](sdk/docs/architecture.md) Â· [`sdk/docs/experiments.md`](sdk/docs/experiments.md) Â· [`sdk/training/README.md`](sdk/training/README.md) Â· [`research.md`](research.md).
+Useful developer documentation: [`sdk/docs/architecture.md`](sdk/docs/architecture.md) · [`sdk/docs/experiments.md`](sdk/docs/experiments.md) · [`sdk/training/README.md`](sdk/training/README.md) · [`research.md`](research.md).
 
 ---
 
-## ðŸ§ª Test Capybara in a repeatable way
+## 🧪 Test Capybara in a repeatable way
 
 1. **Choose a stable object or package** and a scanning profile suitable for its material, size and contact surface.
 2. **Enroll a trusted baseline** using the guided registered positions. Keep the contents fixed during enrollment.
 3. **Check an unchanged control**: repeat the scan with the same contents and normal repositioning.
 4. **Create a controlled change**: remove, substitute or rearrange an item, reseal the container, and scan again.
 5. **Restore the original condition** and repeat to see whether the measurement returns toward the baseline.
-6. **Record the full outcome distribution**, including correct detections, missed changes, false alarms and inconclusive scans â€” not only successful examples.
+6. **Record the full outcome distribution**, including correct detections, missed changes, false alarms and inconclusive scans — not only successful examples.
 
 For a defensible evaluation, keep whole physical objects and sessions separated between model development and final testing. Test multiple device models, operators, placements, packaging materials and mass ranges. Publish the protocol alongside the results whenever possible.
 
 ---
 
-## ðŸ“š Research that inspired Capybara
+## 📚 Research that inspired Capybara
 
 Capybara combines ideas from **active acoustic sensing, vibration-based measurement, physical response analysis, and multimodal mobile sensing**. These papers motivate parts of the approach; **none independently validates Capybara's reported accuracy**.
 
 | Research | Key contribution | Relevance |
 |:--|:--|:--|
-| **[VibroTag â€” Fine-grained Vibration Based Sensing Using a Smartphone](https://arxiv.org/abs/2007.03874)** Â· Ali & Liu (2020) | Smartphone vibration responses can provide information about contacted surfaces | Motivation for phone-based vibrotactile sensing |
-| **[Vi-Liquid â€” Unknown Liquid Identification with Your Smartphone Vibration](https://doi.org/10.1145/3447993.3448621)** Â· Huang et al. (MobiCom 2021) | Active vibration with calibration can reveal properties of liquids | Motivation for active excitation and calibrated response analysis |
-| **[MiLTOn â€” Sensing Product Integrity without Opening the Box](https://doi.org/10.1109/IPSN54338.2022.00038)** Â· Gadre et al. (IPSN 2022) | Studies non-invasive packaged-product integrity through physical sensing | Motivation for inspecting products without opening packaging; uses a different hardware setup |
-| **[Knocker â€” Vibroacoustic Object Recognition](https://nmsl.kaist.ac.kr/projects/knocker/)** | Explores multimodal object sensing | Motivation for combining audio and motion information |
+| **[VibroTag — Fine-grained Vibration Based Sensing Using a Smartphone](https://arxiv.org/abs/2007.03874)** · Ali & Liu (2020) | Smartphone vibration responses can provide information about contacted surfaces | Motivation for phone-based vibrotactile sensing |
+| **[Vi-Liquid — Unknown Liquid Identification with Your Smartphone Vibration](https://doi.org/10.1145/3447993.3448621)** · Huang et al. (MobiCom 2021) | Active vibration with calibration can reveal properties of liquids | Motivation for active excitation and calibrated response analysis |
+| **[MiLTOn — Sensing Product Integrity without Opening the Box](https://doi.org/10.1109/IPSN54338.2022.00038)** · Gadre et al. (IPSN 2022) | Studies non-invasive packaged-product integrity through physical sensing | Motivation for inspecting products without opening packaging; uses a different hardware setup |
+| **[Knocker — Vibroacoustic Object Recognition](https://nmsl.kaist.ac.kr/projects/knocker/)** | Explores multimodal object sensing | Motivation for combining audio and motion information |
 | **[VibePhone](https://doi.org/10.1007/s10044-015-0460-8)** | Explores vibration-based surface recognition | Motivation for excitation/feature design |
 | **[The Boombox](https://proceedings.mlr.press/v164/chen22c.html)** | Studies acoustic evidence of hidden physical states | Motivation for sensing properties not visible to a camera |
 
@@ -544,7 +544,7 @@ Capybara combines ideas from **active acoustic sensing, vibration-based measurem
 
 ---
 
-## ðŸ› ï¸ Customize Capybara for your application
+## 🛠️ Customize Capybara for your application
 
 | Extension point | Example |
 |:--|:--|
@@ -560,7 +560,7 @@ Capybara combines ideas from **active acoustic sensing, vibration-based measurem
 
 ---
 
-## ðŸ¤ Contributing
+## 🤝 Contributing
 
 Contributions are welcome across **Android hardware compatibility, signal processing, device calibration, CPU optimization, reproducible evaluation, documentation and accessible UI**.
 
@@ -581,7 +581,7 @@ When contributing measurement or machine-learning changes, document sensor condi
 
 ---
 
-## ðŸ“œ License
+## 📜 License
 
 Capybara's repository is released under the **[Apache License 2.0](LICENSE)**. You may use, modify and distribute the licensed source, including in commercial applications, subject to the license and notices.
 
@@ -589,13 +589,13 @@ Third-party datasets, pretrained model weights and external assets can have sepa
 
 ---
 
-## ðŸ‘¨â€ðŸ’» Built by Team Nexus
+## 👨‍💻 Built by Team Nexus
 
 <div align="center">
 
-| ðŸ› ï¸ **Christopher Joshy** | ðŸŽ¤ **Kevin Geo Saji** |
+| 🛠️ **Christopher Joshy** | 🎤 **Kevin Geo Saji** |
 |:--:|:--:|
-| Team Lead Â· Development Â· Engineering | Team Member Â· Presentation Â· Product Storytelling |
+| Team Lead · Development · Engineering | Team Member · Presentation · Product Storytelling |
 | [@ChristopherJoshy](https://github.com/ChristopherJoshy) | Team Nexus |
 
 **Created for the iQOO Hackathon 2026 Grand Finale.**
@@ -604,10 +604,10 @@ Third-party datasets, pretrained model weights and external assets can have sepa
 
 <img alt="Capybara hero banner" src=".github/assets/capybara-hero.gif" width="80%" />
 
-### ðŸ¦« Keep the box closed. Let the physics speak.
+### 🦫 Keep the box closed. Let the physics speak.
 
-**If Capybara gave you a new idea, consider starring the repository. â­**
+**If Capybara gave you a new idea, consider starring the repository. ⭐**
 
-[â¬†ï¸ Back to top](#-capybara)
+[⬆️ Back to top](#-capybara)
 
 </div>
